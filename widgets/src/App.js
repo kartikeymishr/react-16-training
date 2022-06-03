@@ -1,54 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 // import Accordion from "./components/Accordion";
 // import Search from "./components/Search";
-import Dropdown from "./components/Dropdown";
-
-const items = [
-    {
-        title: "What is React?",
-        content: "React is a frontend Javascript framework"
-    },
-    {
-        title: "Why use React?",
-        content: "React is a famous JS library amongst engineers"
-    },
-    {
-        title: "How do you use React?",
-        content: "You use React by creating components"
-    }
-]
-
-const options = [
-    {
-        label: "The Colour Red",
-        value: "red"
-    },
-    {
-        label: "The Colour Green",
-        value: "green"
-    },
-    {
-        label: "A Shade of Blue",
-        value: "blue"
-    }
-]
+// import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
+// import options from "./data/data"
+// import items from "./data/data"
 
 const App = () => {
-    const [selected, setSelected] = useState(options[0])
-    const [showDropdown, setShowDropdown] = useState(true)
+    // const [selected, setSelected] = useState(options[0])
 
     return (
         <div>
             {/*<Accordion items={items} />*/}
             {/*<Search />*/}
-            <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-            {showDropdown ?
-                <Dropdown
-                    options={options}
-                    selected={selected}
-                    onSelectedChange={setSelected}
-                /> : null
-            }
+            {/*<Dropdown
+                options={options}
+                selected={selected}
+                onSelectedChange={setSelected}
+            />*/}
+            <Translate/>
         </div>
     )
 }
